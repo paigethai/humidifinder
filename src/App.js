@@ -3,7 +3,7 @@ import Header from './Components/Header';
 
 // Assets
 import './App.css';
-import PollenInfo from './Components/PollenInfo';
+import HumidexInfo from './Components/HumidexInfo';
 
 function App() {
   console.log("App has rendered")
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <PollenInfo />
+        <HumidexInfo />
       </main>
     </div>
   );

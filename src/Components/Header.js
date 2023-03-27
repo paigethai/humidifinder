@@ -3,8 +3,8 @@ const Header = () => {
     return (
         <header>
             <div className="title-container">
-                <h1>Sneezon</h1>
-                <p>Stay Ahead of Your Sneezes: Your Personalized Pollen Forecast</p>
+                <h1>Humidifinder</h1>
+                <p>We'll tell you when it's about to get steamy</p>
             </div>
         </header>
     )

@@ -1,14 +1,15 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+
 import Form from './Form';
+import HumidexDisplay from './HumidexDisplay';
 
 const HumidexInfo = () => {   
 
     const [humidex, setHumidex] = useState('');
-    const  [cityInput, setCityInput] = useState("");
-    // const [apiError, setApiError] = useState(false);
+    const  [cityInput, setCityInput] = useState('');
+    const [apiError, setApiError] = useState(false);
         // error handling ^
-
     
     const userCityInput = (city) => {
         setCityInput(city);
@@ -24,16 +25,23 @@ const HumidexInfo = () => {
             }
         }).then( (apiData) => {
             setHumidex(apiData.data.main.humidity);
-        } )
+
+        }).catch( (error) => {
+            setApiError(true);
+            setHumidex('');
+        })
     }, [cityInput])
     
 
     return (
-        <Form userCityInput={ userCityInput } />
-
+        <>
+            <Form 
+                userCityInput={ userCityInput }
+                apiError ={ apiError }
+            />
+            <HumidexDisplay humidex={ humidex } />
+        </>
     )
-
-
 }
 
 export default HumidexInfo;

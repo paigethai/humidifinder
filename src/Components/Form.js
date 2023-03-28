@@ -9,6 +9,7 @@ const Form = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.userCityInput(cityInput);
+        setCityInput(cityInput)
     }
 
     const handleChange = (event) => {
@@ -18,6 +19,7 @@ const Form = (props) => {
 
     return (
         <form onSubmit={ handleSubmit }>
+            { props.apiError ? <h2>You sure you spelt that right?</h2> : null }
             <label htmlFor='city'>City</label>
             <input 
                 type="text" 
@@ -26,7 +28,7 @@ const Form = (props) => {
                 value={cityInput} 
                 onChange={ handleChange }
             />
-            <button>Click</button>
+            <button>To Sweat or Not Sweat?</button>
         </form>
 
     )

@@ -1,12 +1,11 @@
 // Components
 import Header from './Components/Header';
+import HumidexInfo from './Components/HumidexInfo';
 
 // Assets
 import './App.css';
-import HumidexInfo from './Components/HumidexInfo';
 
 function App() {
-  console.log("App has rendered")
 
   return (
     <div className="App">

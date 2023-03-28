@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans&display=swap');
+
+/* Base Styling */
+html {
+  background: rgb(132,63,251);
+  background: radial-gradient(circle, rgba(132,63,251,1) 0%, rgba(252,155,70,1) 100%);  
+  font-family: 'Work Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1, 
+h2,
+h3 {
+  font-family: 'Space Mono', monospace;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 85%;
 }

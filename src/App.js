@@ -1,6 +1,7 @@
 // Components
 import Header from './Components/Header';
 import HumidexInfo from './Components/HumidexInfo';
+import Footer from './Components/Footer';
 
 // Assets
 import './App.css';
@@ -13,6 +14,7 @@ function App() {
       <main>
         <HumidexInfo />
       </main>
+      <Footer />
     </div>
   );
 }

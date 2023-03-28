@@ -1,10 +1,8 @@
 // HumidexDisplay.js
 
 const HumidexDisplay = (props) => {
-    console.log('Humidex', props)
-
     return (
-        <h2>{props.humidex} %</h2>
+        <h2 className="humidex">{props.humidex} %</h2>
     )
 }
 

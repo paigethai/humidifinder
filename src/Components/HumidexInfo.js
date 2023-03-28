@@ -9,7 +9,6 @@ const HumidexInfo = () => {
     const [humidex, setHumidex] = useState('');
     const  [cityInput, setCityInput] = useState('');
     const [apiError, setApiError] = useState(false);
-        // error handling ^
     
     const userCityInput = (city) => {
         setCityInput(city);
@@ -25,7 +24,7 @@ const HumidexInfo = () => {
             }
         }).then( (apiData) => {
             setHumidex(apiData.data.main.humidity);
-
+            
         }).catch( (error) => {
             setApiError(true);
             setHumidex('');
@@ -39,6 +38,7 @@ const HumidexInfo = () => {
                 userCityInput={ userCityInput }
                 apiError ={ apiError }
             />
+
             <HumidexDisplay humidex={ humidex } />
         </>
     )

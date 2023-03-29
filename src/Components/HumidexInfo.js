@@ -19,7 +19,7 @@ const HumidexInfo = () => {
             axios({
                 url:'https://api.openweathermap.org/data/2.5/weather',
                 params: {
-                    appid:'9092b79e834eb0a03c10d81e200b49c8',
+                    appid: '9092b79e834eb0a03c10d81e200b49c8',
                     q: cityInput,
                     units: 'metric'
                 }

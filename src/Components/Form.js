@@ -20,7 +20,7 @@ const Form = (props) => {
         <section className="form">
             <div className="wrapper">
                 <form onSubmit={ handleSubmit }>
-                    { props.apiError ? <h2>You sure you spelt that right?</h2> : null }
+                    { props.apiError ? <h3>You sure you spelt that right?</h3> : null }
                     <label htmlFor='city'>Where you at? Type in the city...</label>
                     <input 
                         type="text" 

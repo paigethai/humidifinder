@@ -1,11 +1,10 @@
 // Form.js
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
 
 const Form = (props) => {
     
     const  [cityInput, setCityInput] = useState("");
-
+    // conditional statement here
     const handleSubmit = (event) => {
         event.preventDefault();
         props.userCityInput(cityInput);
@@ -18,19 +17,22 @@ const Form = (props) => {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
-            { props.apiError ? <h2>You sure you spelt that right?</h2> : null }
-            <label htmlFor='city'>City</label>
-            <input 
-                type="text" 
-                id='city' 
-                name='city' 
-                value={cityInput} 
-                onChange={ handleChange }
-            />
-            <button>To Sweat or Not Sweat?</button>
+        <section className="form">
+            <div className="wrapper">
+                <form onSubmit={ handleSubmit }>
+                    { props.apiError ? <h2>You sure you spelt that right?</h2> : null }
+                    <label htmlFor='city'>Where you at? Type in the city...</label>
+                    <input 
+                        type="text" 
+                        id='city' 
+                        name='city' 
+                        value={cityInput} 
+                        onChange={ handleChange }
+                />
+                <button>To Sweat or Not Sweat?</button>
         </form>
-
+            </div>
+        </section>
     )
 }
 

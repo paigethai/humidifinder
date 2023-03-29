@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans&display=swap');
 
-/* Base Styling */
-html {
+body {
+  margin: 0;
   background: rgb(132,63,251);
   background: radial-gradient(circle, rgba(132,63,251,1) 0%, rgba(252,155,70,1) 100%);  
   font-size: 120%;
@@ -12,7 +12,7 @@ html {
 h1,
 h2,
 h3,
-p {
+p, {
   margin: 0;
 }
 
@@ -24,34 +24,127 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(1.3rem, 6vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 3rem)
+}
+
+p,
+input,
+button {
+  font-size: clamp(0.8rem, 2vw, 1rem)
+}
+
+button {
+  color: black;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  background-color: #FF7437;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #FF87F6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 85%;
+  width: 75%;
 }
 
 .title-container {
   position: relative;
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
-  z-index: 20;
+  padding: 2rem;
+  width: 66%;
+  background-color: white;
+  opacity: 70%;
+  z-index: 10;
 }
 
 .title-container p {
   margin-top: 1.5rem;
 }
 
-.underlay {
-  position: absolute;
-  top: 7rem;
-  left: 17.5rem;
+.form {
   height: 10rem;
-  width: 55%;
-  background-color: white;
-  opacity: 70%;
-  z-index: 10;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
+.form .wrapper {
+  width: 70%;
+  background-color: white;
+  opacity: 70%;
+  z-index: 30;
+}
+
+form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 40;
+}
+
+label {
+  color: black;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+input {
+  height: 2rem;
+  width: 15rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.humidex-display {
+  height: 5rem;
+}
+
+.text-container {
+  background-color: white;
+  opacity: 70%;
+  padding: 2rem;
+  width: 30%;
+  z-index: 30;
+}
+
+.form h2 {
+  z-index: 40;
+}
+
+footer {
+  background-color: white;
+  opacity: 70%;
+  margin: 0;
+  margin-top: 10rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  input {
+    width: 13rem;
+  }
+  
+  .humidex-display {
+    margin-top: 10rem;
+  }
+}

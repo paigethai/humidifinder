@@ -2,7 +2,9 @@
 
 const Footer = () => {
     return (
-        <p>© 2023 Paige Thai</p>
+        <footer>
+            <p>© Paige Thai 2023</p>
+        </footer>
     )
 }
 

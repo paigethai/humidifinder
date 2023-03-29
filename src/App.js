@@ -11,9 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
-        <HumidexInfo />
-      </main>
+      <HumidexInfo />
       <Footer />
     </div>
   );

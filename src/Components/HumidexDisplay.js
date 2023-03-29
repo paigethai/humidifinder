@@ -2,7 +2,11 @@
 
 const HumidexDisplay = (props) => {
     return (
-        <h2 className="humidex">{props.humidex} %</h2>
+        <section className="humidex-display">
+            <div className="wrapper text-container">
+                <h2 className="humidex">{props.humidex}%</h2>
+            </div>
+        </section>
     )
 }
 

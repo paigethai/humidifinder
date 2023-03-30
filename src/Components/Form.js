@@ -28,9 +28,9 @@ const Form = (props) => {
                         name='city' 
                         value={cityInput} 
                         onChange={ handleChange }
-                />
-                <button>To Sweat or Not Sweat?</button>
-        </form>
+                    />
+                    <button>To Sweat or Not Sweat?</button>
+                </form>
             </div>
         </section>
     )

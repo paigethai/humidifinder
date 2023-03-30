@@ -6,7 +6,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans&display=swap');
 
-body {
+.App {
   margin: 0;
   background: rgb(132,63,251);
   background: radial-gradient(circle, rgba(132,63,251,1) 0%, rgba(252,155,70,1) 100%);  
